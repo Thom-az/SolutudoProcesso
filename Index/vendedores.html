@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard de Vendas</title>
+        <link rel="stylesheet" type="text/css" href="./assets_Index/css/ProdutosStyle.css">
+        <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.1/dist/bootstrap-table.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <div class="navigation fixed-top py-lg-0 ">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><ion-icon name="logo-apple-ar"></ion-icon></span>
+                            <span class="title">Vendas<sup>3</sup></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <span class="icon"><ion-icon name="grid-outline"></ion-icon></span>
+                            <span class="title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="vendas.html">
+                            <span class="icon"><ion-icon name="bag-check-outline"></ion-icon></span>
+                            <span class="title">Vendas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="produtos.html">
+                            <span class="icon"><ion-icon name="pricetags-outline"></ion-icon></span>
+                            <span class="title">Produtos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="vendedores.html">
+                            <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                            <span class="title">Vendedores</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                            <span class="title">Configurações</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><ion-icon name="help-circle-outline"></ion-icon></span>
+                            <span class="title">Suporte</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="login.html">
+                            <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                            <span class="title">Encerrar sessão</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- main -->
+            <div class="main">
+                <div class="topbar sticky-top">
+                    <div class="toggle">
+                        <ion-icon name="menu-outline"></ion-icon>
+                    </div>
+
+                    <!-- pesquisar-->
+                    <div class="search-box">
+                        <button class="btn-search"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                          </svg></button>
+                        <input type="text" class="input-search" placeholder="Pesquisar...">
+                      </div>
+
+                    <!--usuario-->
+                    <div class="usuario">
+                        <a href="#">
+                        <img src="./assets_Index/img/user/userIdDefault.jpg"></a>
+                    </div>
+                </div>
+
+                <!--cards-->
+                <div class="cardBoxPrincipal">
+                    <div class="card">
+                        <img class="card-img-top" src="https://www.otempo.com.br/image/contentid/policy:1.2711588:1659738154/elon-musk-twitter-jpg.jpg?f=3x2&w=1224" alt="Elon Musk">
+                        <div class="card-body">
+                          <h5 class="card-title">Elon Musk</h5>
+                          <p class="card-text">É um empreendedor sul-africano (com cidadanias canadense e norte-americana) mundialmente conhecido por fundar e liderar empresas como SpaceX, Tesla, Hyperloop, Neuralink, Startlink, The Boring Company, SolarCity e, anteriormente, o Paypal.</p>
+                          <a href="https://www.suno.com.br/tudo-sobre/elon-musk/" class="btn btn-primary">Saber mais</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="https://www.intrinseca.com.br/blog/wp-content/uploads/2016/10/stevejobsheader-1024x674.jpg" alt="Steve Jobs">
+                        <div class="card-body">
+                          <h5 class="card-title">Steve Jobs</h5>
+                          <p class="card-text">Inventor, empresário e magnata americano no setor da informática. Notabilizou-se como co-fundador, presidente e diretor executivo da Apple Inc. e por revolucionar seis indústrias: computadores pessoais, filmes de animação, música, telefones, tablets e publicações digitais.</p>
+                          <a href="https://pt.wikipedia.org/wiki/Steve_Jobs" class="btn btn-primary">Saber mais</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg" alt="Bruno Kimura">
+                        <div class="card-body">
+                          <h5 class="card-title">Bruno Kimura</h5>
+                          <p class="card-text">Mestre da tecnologia, inventor, magnata de sucesso, criador da palavra "Filantropia". Um dos melhores.</p>
+                          <a href="https://www.solutudo.com.br/sp/botucatu" class="btn btn-primary">Saber mais</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="https://s2.glbimg.com/PUZaxeH10sfPu59n7vGYVEhii40=/620x430/e.glbimg.com/og/ed/f/original/2022/07/25/bill-gates.png" alt="Bill Gates">
+                        <div class="card-body">
+                          <h5 class="card-title">Bill Gates</h5>
+                          <p class="card-text">William Henry Gates III, mais conhecido como Bill Gates, é um magnata, empresário, diretor executivo, investidor, filantropo e autor americano, que ficou conhecido por fundar, junto com Paul Allen a Microsoft, a maior e mais conhecida empresa de software do mundo em termos de valor de mercado.</p>
+                          <a href="https://pt.wikipedia.org/wiki/Bill_Gates" class="btn btn-primary">Saber mais</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg" alt="Cleyton Globson">
+                        <div class="card-body">
+                          <h5 class="card-title">Cleyton Globson</h5>
+                          <p class="card-text">Vendedor de sucesso, Cleyton Globson, é um verdadeiro vendedor que consegue conquistar rapidamente seus clientes.</p>
+                          <a href="#" class="btn btn-primary">Saber mais</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg" alt="Mister Chocolat">
+                        <div class="card-body">
+                          <h5 class="card-title">Mister Chocolat</h5>
+                          <p class="card-text">Um vendedor engraçado e carismático, conquista seus clientes pela risada e pelo charme.</p>
+                          <a href="https://it.wikipedia.org/wiki/Mister_Chocolat" class="btn btn-primary">Saber mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.3/bootbox.min.js" integrity="sha512-U3Q2T60uOxOgtAmm9VEtC3SKGt9ucRbvZ+U3ac/wtvNC+K21Id2dNHzRUC7Z4Rs6dzqgXKr+pCRxx5CyOsnUzg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>  
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        
+
+       <script>
+        //adicionar classe hovered no item do menu selecionado
+        let list = document.querySelectorAll('.navigation li');
+        function LinkAtivo(){
+        list.forEach((item)=>
+        item.classList.remove('hovered'));
+        this.classList.add('hovered');
+        }
+        list.forEach((item)=>
+        item.addEventListener('mouseover',LinkAtivo));
+
+        //toggle do menu
+        let toggle = document.querySelector('.toggle');
+        let navigation =  document.querySelector('.navigation');
+        let main = document.querySelector('.main');
+
+        toggle.onclick = function(){
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard de Vendas</title>
+        <link rel="stylesheet" type="text/css" href="./assets_Index/css/VendaStyles.css">
+        <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.1/dist/bootstrap-table.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container ">
+            <div class="navigation fixed-top py-lg-0 ">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><ion-icon name="logo-apple-ar"></ion-icon></span>
+                            <span class="title">Vendas<sup>3</sup></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <span class="icon"><ion-icon name="grid-outline"></ion-icon></span>
+                            <span class="title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="vendas.html">
+                            <span class="icon"><ion-icon name="bag-check-outline"></ion-icon></span>
+                            <span class="title">Vendas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="produtos.html">
+                            <span class="icon"><ion-icon name="pricetags-outline"></ion-icon></span>
+                            <span class="title">Produtos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="vendedores.html">
+                            <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                            <span class="title">Vendedores</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                            <span class="title">Configurações</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><ion-icon name="help-circle-outline"></ion-icon></span>
+                            <span class="title">Suporte</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="login.html">
+                            <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                            <span class="title">Encerrar sessão</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- main -->
+            <div class="main">
+                <div class="topbar sticky-top">
+                    <div class="toggle">
+                        <ion-icon name="menu-outline"></ion-icon>
+                    </div>
+
+                    <!-- pesquisar-->
+                    <div class="search-box">
+                        <button class="btn-search"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                          </svg></button>
+                        <input type="text" class="input-search" placeholder="Pesquisar...">
+                      </div>
+
+                    <!--usuario-->
+                    <div class="usuario">
+                        <a href="#">
+                        <img src="./assets_Index/img/user/userIdDefault.jpg"></a>
+                    </div>
+                </div>
+
+                <!--cards-->
+                <div class="cardBox">
+                    <div class="card">
+                        <div class="iconBx">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                                <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                              </svg>
+                        </div>
+                        <div>
+                            <div class="cardName">Último produto vendido:<div class="numbers">Solusite</div></div>                                                       
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="iconBx">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-cash-stack" viewBox="0 0 16 16">
+                                <path d="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1H1zm7 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+                                <path d="M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V5zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2H3z"/>
+                              </svg>
+                        </div>
+                        <div>
+                            <div class="cardName">No valor de:</div>
+                            <div class="numbers">R$ 49,90</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- botões de impressão e de cadastro de venda-->
+                <div class="cardBtns">
+                    <div class="cards">
+                        <button onClick="window.print()" id="imprimirBtn"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                          </svg></button>
+                          <div class="cardName">Imprimir relatório</div>
+                    </div>
+                    <div class="cards">
+                        <button id="cadastrarBtn" data-toggle="modal" data-target="#cadastroVenda"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-receipt-cutoff" viewBox="0 0 16 16">
+                            <path d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zM11.5 4a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1z"/>
+                            <path d="M2.354.646a.5.5 0 0 0-.801.13l-.5 1A.5.5 0 0 0 1 2v13H.5a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1H15V2a.5.5 0 0 0-.053-.224l-.5-1a.5.5 0 0 0-.8-.13L13 1.293l-.646-.647a.5.5 0 0 0-.708 0L11 1.293l-.646-.647a.5.5 0 0 0-.708 0L9 1.293 8.354.646a.5.5 0 0 0-.708 0L7 1.293 6.354.646a.5.5 0 0 0-.708 0L5 1.293 4.354.646a.5.5 0 0 0-.708 0L3 1.293 2.354.646zm-.217 1.198.51.51a.5.5 0 0 0 .707 0L4 1.707l.646.647a.5.5 0 0 0 .708 0L6 1.707l.646.647a.5.5 0 0 0 .708 0L8 1.707l.646.647a.5.5 0 0 0 .708 0L10 1.707l.646.647a.5.5 0 0 0 .708 0L12 1.707l.646.647a.5.5 0 0 0 .708 0l.509-.51.137.274V15H2V2.118l.137-.274z"/>
+                          </svg></button>
+                        <div class="cardName">Cadastrar nova venda</div>
+                    </div>
+                </div>
+
+                <!--modal de cadastro de venda-->
+                <div class="modal" id="cadastroVenda" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-lg" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">Cadastro de venda</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                                <div class="empresaNome">
+                                    <input type="text" placeholder="Nome da empresa" required/>
+                                </div><br>
+                                <div class="BxVendedores">
+                                    <label for="salesman">Escolher Vendedor:</label>
+                                    <select name="vendedor" id="Vendedores">
+                                        <option value="Jobs">Steve Jobs</option>
+                                        <option value="Musk">Elon Musk</option>
+                                        <option value="Kimura">Bruno Kimura</option>
+                                        <option value="Gates">Bill Gates</option>
+                                        <option value="Globson">Cleyton Globson</option>
+                                        <option value="Chocolat">Mister Chocolat</option>
+                                    </select>
+                                </div><br>
+                                <div class="BxProdutos">
+                                    <label for="prdocut">Produto Vendido:</label>
+                                    <select name="produto" id="Produtos">
+                                        <option value="JVD">Jornada de Vendas Digital</option>
+                                        <option value="Solusite">Solusite</option>
+                                        <option value="Gestao">Gestão Google My Business</option>
+                                        <option value="Consultoria">Consultoria de SEO</option>
+                                        <option value="Pacote">Pacote Jornada de Vendas Digital + Solusite</option>
+                                    </select>
+                                </div><br>
+                                <div class="VendaData">
+                                    <label for="startDate">Data da Venda:</label><br>
+                                        <div class="col-lg-3">
+                                        <input id="startDate" class="form-control" type="date" />
+                                    </div>
+                                </div><br>
+                                <div class="ValorVenda">
+                                    <span>R$<input type="text" placeholder="Valor da venda" required/></span>
+                                </div><br>
+                                <div class="PagoSN "><label>Já foi pago?</label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Pago" value="Pago">
+                                        <label class="form-check-label" for="pago">Pago.</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Npago" value="Npago">
+                                        <label class="form-check-label" for="Npago">Não Pago.</label>
+                                      </div>
+                                </div><br>
+                            
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-primary">Cadastrar</button>
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                <!-- lista de compras recentes-->
+                <div class="details">
+                    <div class="recentOrders">
+                        <div class="cardHeader">
+                            <h2>Vendas Recentes</h2>
+                        </div><br>
+                        <table id="TabelaRecente" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <td>Produto</td>
+                                    <td>Data</td>
+                                    <td>Preço</td>  
+                                    <td>Status</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Jornada de Vendas Digital</td>
+                                    <td>12/05/2022</td>
+                                    <td>R$ 190,00</td>
+                                    <td><span class="status pago">Pago</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Jornada de Vendas Digital</td>
+                                    <td>12/05/2022</td>
+                                    <td>R$ 190,00</td>
+                                    <td><span class="status pago">Pago</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Consultoria de SEO</td>
+                                    <td>17/09/2022</td>
+                                    <td>R$ 2.000,00</td>
+                                    <td><span class="status Npago">Não pago</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Gestão Google My Business</td>
+                                    <td>27/08/2022</td>
+                                    <td>R$ 120,99</td>
+                                    <td><span class="status pago">Pago</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Pacote Jornada de Vendas Digital + Solusite</td>
+                                    <td>18/10/2022</td>
+                                    <td>R$ 2.200,00</td>
+                                    <td><span class="status Npago">Não pago</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Consultoria de SEO</td>
+                                    <td>17/09/2022</td>
+                                    <td>R$ 2.000,00</td>
+                                    <td><span class="status Npago">Não pago</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Pacote Jornada de Vendas Digital + Solusite</td>
+                                    <td>16/04/2022</td>
+                                    <td>R$ 2.200,00</td>
+                                    <td><span class="status pago">Pago</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Solusite</td>
+                                    <td>19/11/2022</td>
+                                    <td>R$ 49,90</td>
+                                    <td><span class="status pago">Pago</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Solusite</td>
+                                    <td>15/03/2022</td>
+                                    <td>R$ 49,90</td>
+                                    <td><span class="status pago">Pago</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Solusite</td>
+                                    <td>21/07/2022</td>
+                                    <td>R$ 49,90</td>
+                                    <td><span class="status pago">Pago</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Gestão Google My Business</td>
+                                    <td>18/10/2022</td>
+                                    <td>R$ 120,99</td>
+                                    <td><span class="status pago">Pago</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- bibliotecas js-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.3/bootbox.min.js" integrity="sha512-U3Q2T60uOxOgtAmm9VEtC3SKGt9ucRbvZ+U3ac/wtvNC+K21Id2dNHzRUC7Z4Rs6dzqgXKr+pCRxx5CyOsnUzg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>  
+        <script src="https://unpkg.com/bootstrap-table@1.21.1/dist/bootstrap-table.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+
+       <script>
+        //adicionar classe hovered no item do menu selecionado
+        let list = document.querySelectorAll('.navigation li');
+        function LinkAtivo(){
+        list.forEach((item)=>
+        item.classList.remove('hovered'));
+        this.classList.add('hovered');
+        }
+        list.forEach((item)=>
+        item.addEventListener('mouseover',LinkAtivo));
+
+        //toggle do menu
+        let toggle = document.querySelector('.toggle');
+        let navigation =  document.querySelector('.navigation');
+        let main = document.querySelector('.main');
+
+        toggle.onclick = function(){
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+        //organizar tabela no click do componente
+        function listarTudo() {
+        var table, rows, switching, i, x, y, shouldSwitch;
+        table = document.getElementById("TabelaRecente");
+        switching = true;
+        while (switching) {
+            switching = false;
+            rows = table.rows;
+            for (i = 1; i < (rows.length - 1); i++) {
+            shouldSwitch = false;
+            x = rows[i].getElementsByTagName("TD")[0];
+            y = rows[i + 1].getElementsByTagName("TD")[0];
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                shouldSwitch = true;
+                break;
+            }
+            }
+            if (shouldSwitch) {
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+            }
+        }
+        }
+        //modal js
+        $('#cadastroVenda').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+        })
+        //selecionar data da venda js
+        $(document).ready(function () {
+        $('#TabelaRecente').DataTable();
+        });
+        </script>
+    </body>
+</html>
